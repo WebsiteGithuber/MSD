@@ -47,7 +47,7 @@
                         <i class='bx bx-show toggleIcon'></i>
                     </div>
                     <p>
-                        Password Hint: Your Language Name.
+                        Password Hint: Your English Name.
                     </p>
                     <button id="loginButton" type="submit">Log In</button>
                 </form>
@@ -66,11 +66,11 @@
                 var userValue = document.getElementById("password").value;
                 var overlayer = document.getElementById("overlayer");
 
-                if (userValue === "miracle") {
-                    // console.log("miracle");
+                if (userValue === "david") {
+                    // console.log("david");
                     overlayer.style.display = "none";
                 } else {
-                    console.log("Password Incorrect");
+                    alert("Password Incorrect");
                     // userValue.style.backgroundColor="red"
                 }
             });
