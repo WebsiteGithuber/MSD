@@ -211,7 +211,7 @@ form input:hover {
 
 #showPass i {
     font-size: 30px;
-    color: rgba(153, 153, 153, 0.955);
+    color: white;
 }
 form p {
     font-family: roboto;
