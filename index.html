@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Spiritual Director</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                MSD
+            </div>
+            <div class="img"></div>
+            <div class="menu-btn">
+                <i class='bx bx-menu-alt-right'></i>
+            </div>
+        </div>
+        <div class="side-menu">
+
+        </div>
+        <div class="msg-box">
+            <div class="slide-show">
+                <img src="/img/Status-removebg-preview.png" alt="">
+            </div>
+            <div class="text">
+                <span class="blink"></span>
+            </div>
+
+
+        </div>
+        <div class="package-container" id="overlayer">
+            <div class="login-box">
+                <form action="">
+                    <div class="user">
+
+                    </div>
+                    <label for="password">Login</label>
+                    <input type="text" value="David" disabled>
+                    <input type="password" placeholder="Password" id="password" required>
+                    <div id="showPass">
+                        <i class='bx bx-show toggleIcon'></i>
+                    </div>
+                    <p>
+                        Password Hint: Your Language Name.
+                    </p>
+                    <button id="loginButton" type="submit">Log In</button>
+                </form>
+                <!-- <button type="submit">Log In</button> -->
+            </div>
+        </div>
+        <script src="/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script> -->
+
+        <script>
+            var loginButton = document.getElementById("loginButton");
+            loginButton.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                var userValue = document.getElementById("password").value;
+                var overlayer = document.getElementById("overlayer");
+
+                if (userValue === "miracle") {
+                    // console.log("miracle");
+                    overlayer.style.display = "none";
+                } else {
+                    console.log("Password Incorrect");
+                    // userValue.style.backgroundColor="red"
+                }
+            });
+
+            const typee = () => {
+                var myHTML = `
+                <div class="love">
+                    <img src="/img/heart.png" alt="">
+                </div>
+                `
+                var typed = new Typed(".msg-box .blink", {
+                    strings: [
+                        "I wanted to express my heartfelt gratitude for all you've done for me. I can't imagine where I'd be today if you hadn't been there for me when I was a kid. Your guidance and encouragement towards the Lord's path have been truly life-changing",
+                        `Thank you from the bottom of my heart. ${myHTML}I love you so much.`
+                    ],
+                    typeSpeed: 90,
+                    backSpeed: 30,
+                    backDelay: 7000,
+                    loop: true
+                })
+            };
+
+            typee()
+        </script>
+    </div>
+
+</body>
+
+</html>

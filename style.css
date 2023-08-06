@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Caprasimo&family=Monoton&family=Orbitron:wght@400;500;600&family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: min(100%, 1000px);
+    height: 100%;
+    border-radius: 8px;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    filter: hue-rotate(20deg);
+    box-shadow: 1px 1px 5px rgba(153, 153, 153, 0.955);
+
+}
+.container::before {
+    content: '';
+    z-index: 999;
+    width: 100%;
+    height: 100px;
+    background-color: rebeccapurple;
+    position: absolute;
+    /* background-image: url(/img/flower.png); */
+    background-position: -20px;
+    padding-top: 40px;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 0;
+
+}
+.header {
+    height: 100px;
+    background: linear-gradient(-45deg, rebeccapurple 70%, black 70%);
+    position: absolute;
+    overflow: hidden;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    box-shadow: 1px 1px 15px rgb(65, 65, 65);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.img {
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+    background-color: black;
+    border: .5px solid black;
+    background: url(/img/img.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.side-menu {
+    display: none;
+    z-index: 2;
+    width: 70%;
+    height: 100%;
+    background-color: transparent;
+    filter: blur(60);
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px);
+}
+.logo {
+    font-family: Orbitron;
+    font-size: 40px;
+    letter-spacing: 5px;
+    font-weight:lighter;
+    color: transparent;
+    background: linear-gradient(-65deg, red 60%, aqua 20%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    position: relative;
+}
+.logo::before {
+    content: 'My Spiritual Director';
+    position: absolute;
+    width: 80px;
+    color: black;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: .5px;
+    font-size: 9px;
+    margin-left: 12px;
+    text-align: center;
+    border-radius: 20px;
+    height: 4px;
+    background-color: transparent;
+    bottom: 28px;
+}
+
+.menu-btn {
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    right: 20px;
+}
+
+.package-container {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.package-container .login-box {
+    border: 1px solid rgba(190, 190, 190, 0.592);
+    border-radius: 5px;
+    background: rgba(231, 228, 228, 0.384);
+    height: 30vh;
+    width: 600px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    position: relative;
+}
+
+input[value="David"] {
+    font-family: Orbitron;
+    font-size: 20px;
+    color: transparent;
+    background: linear-gradient(-45deg, red 50%, rebeccapurple 20%, red, rebeccapurple);
+    background-clip: text;
+    -webkit-background-clip: text;
+    cursor:not-allowed;
+}
+
+input[value="David"]:hover {
+    border-color: transparent;
+    box-shadow: none;
+}
+form input {
+    height: 50px;
+    border: .5px solid rgba(190, 190, 190, 0.592);
+    border-radius: 3px;
+    padding: .5rem;
+    outline-color: transparent;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: transparent;
+    font-size: 2rem;
+}
+
+form input::placeholder {
+    font-size: 15px;
+}
+
+form label {
+    font-size: 20px;
+    position: relative;
+    font-family: Orbitron;
+    color: rebeccapurple;
+}
+form .user {
+    height: 50px;
+    border-radius: 20%;
+    width: 50px;
+    border: 2px solid rebeccapurple;
+    position: absolute;
+    top: -20px;
+    background: url(/img/img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+form input:hover {
+    border-color: rebeccapurple;
+    box-shadow: 1px 1px 15px rgba(189, 189, 189, 0.495);
+}
+#showPass {
+    position: absolute;
+    top: 110px;
+    right: 20px;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+#showPass i {
+    font-size: 30px;
+    color: rgba(153, 153, 153, 0.955);
+}
+form p {
+    font-family: roboto;
+    text-align: left !important;
+    color: rgb(63, 63, 63);
+    font-size: 12px;
+}
+.login-box button {
+    height: 40px;
+    margin-top: 10px;
+    background-color: rebeccapurple;
+    border: 0;
+    font-size: 20px;
+    font-family: Monoton;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.msg-box {
+    height: 60%;
+    width: 100%;
+    z-index: 999;
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    
+}
+.msg-box .slide-show {
+    border: 2px solid transparent;
+    transform:scale(1);
+    animation: popout 1s linear;
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .msg-box .slide-show {
+        display: none;
+    }
+    .text {
+        width: 95% !important;
+        margin-inline: auto;
+        margin-top: -20px !important;
+    }
+    .text span {
+        font-size: 20px !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .msg-box .slide-show img {
+        margin-top: -40px !important;
+    }
+}
+@keyframes popout {
+    0% {        
+        transform:scale(.1);
+    }
+    20% {
+        transform: scale(.6);
+    }
+    40% {
+        transform:scale(.8);
+    }
+    60% {
+        transform:scale(1);
+        transform: rotate(-10deg);
+    }
+    80% {
+
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(-20deg);
+
+    }
+}
+.msg-box .slide-show img{
+    animation: boom 10s linear infinite;
+}
+@keyframes boom {
+    0% {        
+        transform:scale(1);
+    }
+    100% {
+        transform:scale(1.05);
+    }
+}
+
+.msg-box .text {
+    background-color: rgb(90, 90, 90);
+    border-radius: 10px;
+    width: 50%;
+    padding: 5px;
+    overflow: hidden;
+    height: 500px;
+    border: 2px solid white;
+    box-shadow: 1px 1px 11px black;
+}
+
+.msg-box span {
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+    font-family: Orbitron;
+    max-width: 85%;
+}
+
+.love {
+    border: 2px solid rgb(111, 111, 111);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+.love img{
+    width: 200px;
+    height: 200px;
+    animation: heart 1s linear infinite;
+}
+
+@keyframes heart {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
