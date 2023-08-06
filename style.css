@@ -176,6 +176,7 @@ form input {
 
 form input::placeholder {
     font-size: 15px;
+    color: white;
 }
 
 form label {
